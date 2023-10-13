@@ -19,3 +19,12 @@ After that running using path variable key using command. Example for plan and a
 ```
 and done, please check your datadog.
 
+for distroy/apply spesific target using this command
+```bash
+    terraform apply -target=’resource.name’ #one target
+    terraform destroy -target RESOURCE_TYPE.NAME -target RESOURCE_TYPE2.NAME #multiple target
+    
+    example one target: terraform destroy -target='datadog_role.ro_role' -var-file='/Users/tarmizyharsha/Documents/learning/terrafom/datadog/variable.tfvars'
+
+```
+
