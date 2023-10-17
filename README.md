@@ -28,3 +28,17 @@ for distroy/apply spesific target using this command
 
 ```
 
+## UptimeRobot Monitoring Link Apps
+Please create file variable.tfvar using this for datadog.
+
+```bash
+    uptimerobot_api_key = "xxxx"
+```
+
+After that running using path variable key using command. Example for plan and apply
+```bash
+    terraform plan -var-file='/Users/tarmizyharsha/Documents/learning/terrafom/uptimerobot/variable.tfvars' 
+
+    terraform apply -var-file='/Users/tarmizyharsha/Documents/learning/terrafom/uptimerobot/variable.tfvars' 
+```
+
