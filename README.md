@@ -1,6 +1,6 @@
 # Overview 
 
-Note: Please run the command ("terraform init") in the project (folder) before you use the all file .tf
+Note: Please run the command `terraform init` in the project (folder) before you use the all file .tf
 
 ## Datadog
 
