@@ -1,6 +1,6 @@
 # Overview 
 
-Note: Please terraform init in the project (folder) before you use the all file .tf
+Note: Please run the command ("terraform init") in the project (folder) before you use the all file .tf
 
 ## Datadog
 
@@ -43,3 +43,6 @@ After that running using path variable key using command. Example for plan and a
     terraform apply -var-file='/Users/tarmizyharsha/Documents/learning/terrafom/uptimerobot/variable.tfvars' 
 ```
 
+# Authors
+
+- [@tarmizyharsha]
