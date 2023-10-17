@@ -1,6 +1,6 @@
 # Overview 
 
-Note: Please terraform init before you use the all file .tf
+Note: Please terraform init in the project (folder) before you use the all file .tf
 
 ## Datadog
 
