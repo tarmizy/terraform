@@ -28,6 +28,7 @@ for distroy/apply spesific target using this command
     example one target: terraform destroy -target='datadog_role.ro_role' -var-file='/Users/tarmizyharsha/Documents/learning/terrafom/datadog/variable.tfvars'
 
 ```
+for using for_each condition , you can create data using csv file, please see in folder data, and see monitoring.tf for using for_each loop condition
 
 ## UptimeRobot Monitoring Link Apps
 Please create file variable.tfvar using this for datadog.
