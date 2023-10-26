@@ -1,0 +1,4 @@
+name,type,message,escalation_message,query,tags,env
+
+Kubernetes Pod Health,metric alert,Kubernetes Pods are not in an optimal health state. Notify: @operator,Please investigate the Kubernetes Pods @operator,max(last_1h):sum:docker.containers.running{*} <= 1,app:demo,env:demo
+Kubernetes demo Health,metric alert,Kubernetes Pods are not in an optimal health state. Notify: @operator,Please investigate the Kubernetes Pods @operator,max(last_1h):sum:docker.containers.running{*} <= 1,app:testing,env:staging

@@ -1,10 +1,14 @@
-resource "datadog_monitor" "beacon" {
-  name               = "Kubernetes Pod Health"
-  type               = "metric alert"
-  message            = "Kubernetes Pods are not in an optimal health state. Notify: @operator"
-  escalation_message = "Please investigate the Kubernetes Pods, @operator"
+locals {
+  monitor = csvdecode(file("./data/monitoring.csv"))
+}
 
-  query = "max(last_1h):sum:docker.containers.running{*} <= 1"
+resource "datadog_monitor" "testing" {
+  for_each = {for monitor in local.monitor : monitor.name => monitor}
+  name               = each.value.name
+  type               = each.value.type
+  message            = each.value.message
+  escalation_message = each.value.escalation_message
+  query              = each.value.query
 
   monitor_thresholds {
     ok       = 3
@@ -14,5 +18,5 @@ resource "datadog_monitor" "beacon" {
 
   notify_no_data = true
 
-  tags = ["app:beacon", "env:demo"]
+  tags = [each.value.tags, each.value.env]
 }
