@@ -1,2 +1,3 @@
 /datadog/variable.tfvars
+/template/variable.tfvars
 /uptimerobot/variable.tfvars
